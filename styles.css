@@ -146,6 +146,8 @@ html, body {
     z-index: 1000; /* Ensure it's above the map */
     display: flex;
     flex-direction: column;
+    bottom: 10px; /* Position at bottom */
+    left: 10px; /* Default to bottom-left corner */
 }
 
 #zoom-in, #zoom-out {
@@ -167,6 +169,8 @@ html, body {
     padding: 10px 15px;
     color: white;
     cursor: pointer;
+    bottom: 10px; /* Position at bottom */
+    right: 10px; /* Default to bottom-right corner */
 }
 
 /* Media query for vertical/portrait orientation on mobile devices */
@@ -185,12 +189,12 @@ html, body {
 /* Media query for landscape orientation (optional, adjust as needed) */
 @media (max-width: 768px) and (orientation: landscape) {
     #zoom-buttons {
-        top: 10px;
+        bottom: 10px;
         left: 10px;
     }
 
     #filter-button {
-        top: 10px;
+        bottom: 10px;
         right: 10px;
     }
 }
