@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StartMaps</title>
-    <!-- Include Leaflet library -->
+    
+    <!-- Leaflet library -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <!-- Include leaflet-control-geocoder library -->
+    
+    <!-- Leaflet Control Geocoder -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css">
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
-    <!-- Include Font Awesome for icons -->
+    
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Include Awesomplete library -->
+    
+    <!-- Awesomplete library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.2/awesomplete.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.2/awesomplete.min.js"></script>
-    <!-- Include your custom styles -->
+    
+    <!-- Custom styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -34,22 +39,13 @@
         <div id="map"></div>
     </div>
 
-    <!-- Zoom Buttons -->
-    <div id="zoom-buttons">
-        <button id="zoom-in">+</button>
-        <button id="zoom-out">-</button>
-    </div>
-
-    <!-- Filter Button -->
     <button id="filter-button" onclick="toggleFilterOptions()">Filter</button>
 
-    <!-- Filter Options -->
     <div id="filter-options">
         <div>
             <button id="select-all-button" onclick="selectAllFilters()">Select All</button>
             <button id="deselect-all-button" onclick="deselectAllFilters()">Deselect All</button>
         </div>
-        
         <div class="filter-option">
             <input type="checkbox" id="filter-gold" checked> Master + / Master (Gold)
         </div>
@@ -69,7 +65,8 @@
             <input type="checkbox" id="filter-orange" checked> 32+ attendees (Orange)
         </div>
         <div class="filter-option">
-            <input type="checkbox" id="filter-yellow" checked> 24+ attendees (Yellow)
+            <input type="checkbox" id="filter-yellow" checked> 24+ attendees (
+            Yellow)
         </div>
         <div class="filter-option">
             <input type="checkbox" id="filter-green" checked> 16+ attendees (Green)
