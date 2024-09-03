@@ -47,6 +47,16 @@ html, body {
         text-align: center;
         margin-bottom: 10px;
     }
+
+    #zoom-buttons {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    #filter-button {
+        bottom: 10px;
+        right: 10px;
+    }
 }
 
 #game-search {
@@ -140,61 +150,91 @@ html, body {
     margin-right: 10px;
 }
 
-/* Base styles for zoom buttons and filter button */
-#zoom-buttons {
-    position: absolute;
-    z-index: 1000; /* Ensure it's above the map */
-    display: flex;
-    flex-direction: column;
-    bottom: 10px; /* Position at bottom */
-    left: 10px; /* Default to bottom-left corner */
+/* Filter Button */
+#filter-button {
+    position: fixed;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4d79ff;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 1000;
 }
 
-#zoom-in, #zoom-out {
+#filter-button:hover {
+    background-color: #1a53ff;
+}
+
+/* Filter Options */
+#filter-options {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    max-width: 300px;
+    overflow-y: auto;
+}
+
+.filter-option {
+    margin-bottom: 10px;
+}
+
+.filter-option input {
+    margin-right: 5px;
+}
+
+#select-all-button, #deselect-all-button {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+#select-all-button {
+    background-color: #4CAF50;
+}
+
+#deselect-all-button {
+    background-color: #f44336;
+}
+
+/* Zoom Buttons */
+#zoom-buttons {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+#zoom-buttons button {
+    margin-bottom: 10px;
     background-color: #007bff;
     border: none;
     border-radius: 50%;
     padding: 10px;
     color: white;
+    font-size: 18px;
     cursor: pointer;
-    margin: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#filter-button {
-    position: absolute;
-    z-index: 1000; /* Ensure it's above the map */
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    color: white;
-    cursor: pointer;
-    bottom: 10px; /* Position at bottom */
-    right: 10px; /* Default to bottom-right corner */
-}
-
-/* Media query for vertical/portrait orientation on mobile devices */
-@media (max-width: 768px) and (orientation: portrait) {
-    #zoom-buttons {
-        bottom: 10px;
-        left: 10px;
-    }
-
-    #filter-button {
-        bottom: 10px;
-        right: 10px;
-    }
-}
-
-/* Media query for landscape orientation (optional, adjust as needed) */
-@media (max-width: 768px) and (orientation: landscape) {
-    #zoom-buttons {
-        bottom: 10px;
-        left: 10px;
-    }
-
-    #filter-button {
-        bottom: 10px;
-        right: 10px;
-    }
+#zoom-buttons button:last-child {
+    margin-bottom: 0;
 }
