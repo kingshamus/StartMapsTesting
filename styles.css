@@ -139,3 +139,58 @@ html, body {
 .autocomplete-item input[type="checkbox"] {
     margin-right: 10px;
 }
+
+/* Base styles for zoom buttons and filter button */
+#zoom-buttons {
+    position: absolute;
+    z-index: 1000; /* Ensure it's above the map */
+    display: flex;
+    flex-direction: column;
+}
+
+#zoom-in, #zoom-out {
+    background-color: #007bff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#filter-button {
+    position: absolute;
+    z-index: 1000; /* Ensure it's above the map */
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Media query for vertical/portrait orientation on mobile devices */
+@media (max-width: 768px) and (orientation: portrait) {
+    #zoom-buttons {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    #filter-button {
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+/* Media query for landscape orientation (optional, adjust as needed) */
+@media (max-width: 768px) and (orientation: landscape) {
+    #zoom-buttons {
+        top: 10px;
+        left: 10px;
+    }
+
+    #filter-button {
+        top: 10px;
+        right: 10px;
+    }
+}
